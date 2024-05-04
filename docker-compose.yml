@@ -1,6 +1,8 @@
 services:
   app:
-    image: yiisoftware/yii2-php:7.4-apache
+    build:
+      context: ./.docker/app
+      dockerfile: Dockerfile
     container_name: "${APP_NAME}"
     volumes:
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
