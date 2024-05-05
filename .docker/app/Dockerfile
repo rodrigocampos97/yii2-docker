@@ -1,4 +1,6 @@
-FROM yiisoftware/yii2-php:7.4-apache
+ARG PHP_VERSION
+
+FROM yiisoftware/yii2-php:${PHP_VERSION}
 
 RUN groupadd -g 1000 www
 RUN useradd -u 1000 -ms /bin/bash -g www www
